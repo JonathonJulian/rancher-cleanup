@@ -1,0 +1,14 @@
+/.dapper
+/.cache
+/bin
+/dist
+*.swp
+.idea
+./backup
+./backup-restore-operator
+backup-restore-operator
+/secretExamples
+test-backup-location-local/
+.DS_Store
+/backups
+sha256sum-amd64.txt

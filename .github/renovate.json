@@ -1,0 +1,12 @@
+{
+  "extends": ["github>rancher/renovate-config#release"],
+  "baseBranches": ["main"],
+  "packageRules": [
+    {
+      "matchDepNames": [
+        "kubernetes/kubernetes"
+      ],
+      "allowedVersions": "<1.26.0"
+    }
+  ]
+}
