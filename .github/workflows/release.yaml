@@ -64,7 +64,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHCR_PAT }}  # Use a PAT instead of GITHUB_TOKEN
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -74,6 +74,10 @@ jobs:
           tags: |
             type=raw,value=${{ env.IMAGE_TAG }}
             type=raw,value=latest
+
+      - name: Echo image tags for debugging
+        run: |
+           echo "Tags: ${{ steps.meta.outputs.tags }}"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5

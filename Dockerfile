@@ -1,6 +1,7 @@
-FROM registry.suse.com/bci/bci-base:15.5.36.5.47
+FROM registry.suse.com/bci/bci-base:15.6.47.11.9
 
-ENV KUBECTL_VERSION v1.25.15
+ENV KUBECTL_VERSION=v1.25.15
+
 WORKDIR /usr/local/bin
 ARG TARGETARCH
 
